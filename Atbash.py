@@ -9,6 +9,7 @@ def atbash(text):
         word = ''
         for j in i:
             if j.isalpha():
+                j = j.lower()
                 word += alt_alphabet[alphabet.index(j)]
             else:
                 word += j

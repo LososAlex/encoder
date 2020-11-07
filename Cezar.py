@@ -8,6 +8,7 @@ def cezar_encode(text, key):
         word = ''
         for j in i:
             if j.isalpha():
+                j = j.lower()
                 index = alphabet.index(j)
                 if index + key >= len(alphabet):
                     index = index + key - len(alphabet)
@@ -30,6 +31,7 @@ def cezar_decode(text, key):
         word = ''
         for j in i:
             if j.isalpha():
+                j = j.lower()
                 index = alphabet.index(j)
                 if index - key < 0:
                     index = index - key + len(alphabet)

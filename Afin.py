@@ -11,6 +11,7 @@ def afin_encode(text, a, b):
         word = ''
         for j in i:
             if j.isalpha():
+                j = j.lower()
                 index = alphabet.index(j)
                 encode_index = (a * index + b) % 33
                 word += alphabet[encode_index]
@@ -38,6 +39,7 @@ def afin_decode(text, a, b):
             word = ''
             for j in i:
                 if j.isalpha():
+                    j = j.lower()
                     index = alphabet.index(j)
                     decode_index = ((index - b) * alt_a) % 33
                     word += alphabet[decode_index]
